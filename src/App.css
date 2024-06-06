@@ -14,14 +14,7 @@ form label{
 .inputDiv{
   margin-bottom: 10px;
 }
-.inputDiv input.error {
-  border-color: #ff4d4f;
-}
-.inputDiv .error-message {
-  color: #ff4d4f;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-}
+
 input{
   width: 100%;
   padding: 8px 7px;
@@ -50,4 +43,12 @@ button{
   cursor: pointer;
   border-radius: 5px;
   border: none;
+}
+.error {
+  border-color: #ff4d4f;
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }

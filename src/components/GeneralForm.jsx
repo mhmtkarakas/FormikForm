@@ -3,8 +3,9 @@ import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
 import '../App.css'; 
 
+
 const GeneralForm = () => {
-    const {values,errors,touched,handleBlur,handleChange,handleSubmit} = useFormik({
+    const {values,errors,touched,isSubmitting,handleBlur,handleChange,handleSubmit} = useFormik({
         initialValues: {
           email: '',
           age:"",
@@ -12,8 +13,11 @@ const GeneralForm = () => {
           confirmPassword:""
         },
         validationSchema:basicSchema,
-        onSubmit: (values) => {
+        onSubmit: (values, { setSubmitting }) => {
           console.log(values);
+          setTimeout(() => {
+            setSubmitting(false);
+          }, 1000);
         }
       });
   return (
@@ -66,7 +70,7 @@ const GeneralForm = () => {
             />
             {errors.confirmPassword && touched.confirmPassword && <div className='error-message'>{errors.confirmPassword}</div>}
         </div>
-        <button type='submit'>
+        <button disabled={isSubmitting} type='submit'>
           Kaydet
         </button>
     </form>
