@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas';
 import '../App.css'; 
+import { Link } from 'react-router-dom';
 
 
 const GeneralForm = () => {
@@ -73,6 +74,7 @@ const GeneralForm = () => {
         <button disabled={isSubmitting} type='submit'>
           Kaydet
         </button>
+      <Link className='formLink' to="/portal">Portal Forma Git</Link>
     </form>
   )
 }
