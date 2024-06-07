@@ -29,7 +29,7 @@ const PortalForm = () => {
               label="Kullanici adi"
               name="username"
               type="text"
-              placholder="Kullanici Adinizi Giriniz"
+              placeholder="Kullanici Adinizi Giriniz"
             />
             <CustomSelect
               label="Okulunuz"
